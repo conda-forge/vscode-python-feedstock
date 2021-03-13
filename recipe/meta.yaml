@@ -11,8 +11,8 @@ source:
   sha256: 517360d2af77dc7376d02cdfdf9348142d1d2c7b792e5ff6c548871b2aa4e991
 
 build:
-  number: 1
-  skip: true  # [not osx]
+  number: 3
+  skip: true  # [win]
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
     - cairo
