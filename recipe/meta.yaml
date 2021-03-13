@@ -1,5 +1,6 @@
 {% set name = "vscode-python" %}
 {% set version = "2021.2.582707922" %}
+{% set short_version = "2021.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -48,7 +49,7 @@ requirements:
 
 test:
   commands:
-    - code-server --list-extensions --show-versions | grep ms-python.python@2021.2.1
+    - code-server --list-extensions --show-versions | grep ms-python.python@{{ short_version }}
 
 about:
   home: https://github.com/microsoft/vscode-python
