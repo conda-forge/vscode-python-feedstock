@@ -1,5 +1,6 @@
 {% set name = "vscode-python" %}
 {% set version = "2021.2.582707922" %}
+{% set short_version = "2021.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +11,7 @@ source:
   sha256: 517360d2af77dc7376d02cdfdf9348142d1d2c7b792e5ff6c548871b2aa4e991
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
@@ -33,6 +34,7 @@ requirements:
     - nodejs 12  # [not (osx and arm64)]
     - nodejs 15  # [osx and arm64]
     - code-server >=3.9
+    - vscode-jupyter
     # As part of the build, we are compiling node-canvas from source
     - pixman
     - giflib
@@ -43,10 +45,11 @@ requirements:
   run:
     - python
     - code-server >=3.9
+    - vscode-jupyter
 
 test:
   commands:
-    - code-server --list-extensions --show-versions | grep ms-python.python@2021.2.1
+    - code-server --list-extensions --show-versions | grep ms-python.python@{{ short_version }}
 
 about:
   home: https://github.com/microsoft/vscode-python
