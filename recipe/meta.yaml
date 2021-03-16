@@ -1,5 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2021.2.582707922" %}
+{% set version = "2021.3.658691958" %}
 {% set short_version = "2021.2.1" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 517360d2af77dc7376d02cdfdf9348142d1d2c7b792e5ff6c548871b2aa4e991
+  sha256: d1ded55d72667ad043e75ca73adeb3fe54282da4aa7a2923a8748ff1ffe2a701
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
