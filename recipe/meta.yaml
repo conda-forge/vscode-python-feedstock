@@ -1,6 +1,6 @@
 {% set name = "vscode-python" %}
 {% set version = "2021.3.680753044" %}
-{% set short_version = "2021.2.1" %}
+{% set short_version = "2021.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -33,7 +33,7 @@ requirements:
     - packaging
     - nodejs 12  # [not (osx and arm64)]
     - nodejs 15  # [osx and arm64]
-    - code-server >=3.9
+    - code-server >=3.9.2
     - vscode-jupyter
     # As part of the build, we are compiling node-canvas from source
     - pixman
@@ -44,7 +44,7 @@ requirements:
     - libjpeg-turbo
   run:
     - python
-    - code-server >=3.9
+    - code-server >=3.9.2
     - vscode-jupyter
 
 test:
