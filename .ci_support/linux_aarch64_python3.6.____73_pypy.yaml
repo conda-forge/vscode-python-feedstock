@@ -1,5 +1,9 @@
 BUILD:
 - aarch64-conda_cos7-linux-gnu
+c_compiler:
+- gcc
+c_compiler_version:
+- '9'
 cairo:
 - '1.16'
 cdt_arch:
@@ -20,6 +24,8 @@ giflib:
 - '5.2'
 glib:
 - '2'
+jpeg:
+- '9'
 libjpeg_turbo:
 - '2'
 pango:
@@ -27,6 +33,8 @@ pango:
 pin_run_as_build:
   cairo:
     max_pin: x.x
+  jpeg:
+    max_pin: x
   libjpeg_turbo:
     max_pin: x
   pango:
@@ -40,3 +48,6 @@ python:
 - 3.6.* *_73_pypy
 target_platform:
 - linux-aarch64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version

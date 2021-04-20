@@ -1,6 +1,6 @@
 {% set name = "vscode-python" %}
-{% set version = "2021.3.680753044" %}
-{% set short_version = "2021.3.1" %}
+{% set version = "2021.4.765268190" %}
+{% set short_version = "2021.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ef8a929762bb0e17984e82bf09de49ac2e07ecad6a822772f77c744837f9cdac
+  sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
 
 build:
   number: 0
@@ -24,6 +24,7 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make
@@ -41,7 +42,7 @@ requirements:
     - glib
     - cairo
     - pango
-    - libjpeg-turbo
+    - jpeg
   run:
     - python
     - code-server >=3.9.2
