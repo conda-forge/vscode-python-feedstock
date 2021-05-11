@@ -1,6 +1,6 @@
 {% set name = "vscode-python" %}
 {% set version = "2021.5.829140558" %}
-{% set short_version = "2021.4.0" %}
+{% set short_version = "2021.5.0" %}
 
 package:
   name: {{ name|lower }}
