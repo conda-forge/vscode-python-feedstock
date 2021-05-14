@@ -1,5 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2021.4.765268190" %}
+{% set version = "2021.5.840043038" %}
 {% set short_version = "2021.4.0" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
+  sha256: 8f10d9eae154760c601e70434f0ed3ad55d9bca72220d13aa209033ebf453bc1
 
 build:
   number: 0
