@@ -11,7 +11,7 @@ source:
   sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
