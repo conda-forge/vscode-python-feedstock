@@ -13,6 +13,8 @@ source:
 build:
   number: 1
   skip: true  # [win]
+  skip_compile_pyc:
+    - */python/debugpy/_vendored/*
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
     - cairo
