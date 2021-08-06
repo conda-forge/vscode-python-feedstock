@@ -1,5 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2021.4.765268190" %}
+{% set version = "2021.8.1105858891" %}
 {% set short_version = "2021.4.0" %}
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
+  sha256: e3b204ee87bfd9f6968c75a8c43683dd3d27068925c5f62b3c4a5cf9ec34a419
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   skip_compile_pyc:
-    - "*/python/debugpy/_vendored/*"
+    - '*/python/debugpy/_vendored/*'
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
     - cairo
