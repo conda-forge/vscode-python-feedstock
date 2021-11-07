@@ -7,7 +7,7 @@ c_compiler_version:
 cairo:
 - '1.16'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -41,7 +41,7 @@ pin_run_as_build:
 pixman:
 - '0'
 python:
-- 3.6.* *_cpython
+- 3.10.* *_cpython
 target_platform:
 - osx-64
 zip_keys:
