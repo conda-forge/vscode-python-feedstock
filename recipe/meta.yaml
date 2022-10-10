@@ -9,9 +9,11 @@ package:
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
   sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
+  patches:
+    - 0001-Skip-extracting-directories.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   skip_compile_pyc:
     - "*/python/debugpy/_vendored/*"

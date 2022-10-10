@@ -1,0 +1,33 @@
+From 5241ae66b4c7c2e1b7b477b5f69e5f158b9376ac Mon Sep 17 00:00:00 2001
+From: Uwe Korn <uwelk@xhochy.com>
+Date: Mon, 10 Oct 2022 13:15:37 +0000
+Subject: [PATCH] Skip extracting directories
+
+---
+ pythonFiles/install_debugpy.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/pythonFiles/install_debugpy.py b/pythonFiles/install_debugpy.py
+index e9361a6..26748f0 100644
+--- a/pythonFiles/install_debugpy.py
++++ b/pythonFiles/install_debugpy.py
+@@ -1,6 +1,7 @@
+ import io
+ import json
+ import os
++import stat
+ import urllib.request as url_lib
+ import zipfile
+ from packaging.version import parse as version_parser
+@@ -48,6 +49,8 @@ def _download_and_extract(root, url, version):
+                 normalized = os.path.normpath(zip_info.filename)
+                 # Flatten the folder structure.
+                 zip_info.filename = normalized.split(prefix)[-1]
++                if stat.S_ISDIR(zip_info.external_attr >> 16):
++                    continue
+                 wheel.extract(zip_info, root)
+ 
+ 
+-- 
+2.25.1
+
