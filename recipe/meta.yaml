@@ -10,7 +10,7 @@ source:
   sha256: fdcaffd066dd96bb16c455d7bcd6c6864824a0549bd0c9508f40d449dce48acb
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   skip_compile_pyc:
     - '*/python/debugpy/_vendored/*'
