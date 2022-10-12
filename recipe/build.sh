@@ -10,6 +10,5 @@ export
 PIP_NO_INDEX=False python -m pip --disable-pip-version-check install -t ./pythonFiles/lib/python --no-cache-dir --implementation py --no-deps --upgrade -r requirements.txt -vvv
 python ./pythonFiles/install_debugpy.py
 npm ci --prefer-offline
-npm run addExtensionDependencies
 npm run package
 code-server --install-extension ms-python-insiders.vsix

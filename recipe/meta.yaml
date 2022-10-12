@@ -1,6 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2021.4.765268190" %}
-{% set short_version = "2021.4.0" %}
+{% set version = "2022.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,15 +7,13 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: ec5aea246c908fd4b34ca98fc91dcc26751b8c26c819a959e39a701bfbab8376
-  patches:
-    - 0001-Skip-extracting-directories.patch
+  sha256: fdcaffd066dd96bb16c455d7bcd6c6864824a0549bd0c9508f40d449dce48acb
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   skip_compile_pyc:
-    - "*/python/debugpy/_vendored/*"
+    - '*/python/debugpy/_vendored/*'
   ignore_run_exports:
     # node-canvas is built but not installed, so ignore its dependencies
     - cairo
@@ -36,8 +33,7 @@ requirements:
     - python
     - pip
     - packaging
-    - nodejs 12  # [not (osx and arm64)]
-    - nodejs 15  # [osx and arm64]
+    - nodejs 16
     - code-server >=3.9.2
     - vscode-jupyter
     # As part of the build, we are compiling node-canvas from source
@@ -54,7 +50,7 @@ requirements:
 
 test:
   commands:
-    - code-server --list-extensions --show-versions | grep ms-python.python@{{ short_version }}
+    - code-server --list-extensions --show-versions | grep ms-python.python@{{ version }}
 
 about:
   home: https://github.com/microsoft/vscode-python
@@ -62,7 +58,6 @@ about:
   license_family: MIT
   license_file:
     - LICENSE
-    - ThirdPartyNotices-Distribution.txt
     - ThirdPartyNotices-Repository.txt
   summary: Python extension for Visual Studio Code
 
