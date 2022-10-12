@@ -25,7 +25,7 @@ libjpeg_turbo:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pango:
-- '1'
+- '1.50'
 pin_run_as_build:
   python:
     min_pin: x.x
