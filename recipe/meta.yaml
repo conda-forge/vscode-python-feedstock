@@ -1,5 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2022.16.0" %}
+{% set version = "2022.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: fdcaffd066dd96bb16c455d7bcd6c6864824a0549bd0c9508f40d449dce48acb
+  sha256: 10368d0175e34583a84935e691dba122d4ece2e23305700f226b6807508a30b1
 
 build:
   number: 0
