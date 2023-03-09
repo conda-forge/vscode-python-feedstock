@@ -10,7 +10,7 @@ source:
   sha256: 10368d0175e34583a84935e691dba122d4ece2e23305700f226b6807508a30b1
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   skip_compile_pyc:
     - '*/python/debugpy/_vendored/*'
@@ -42,7 +42,7 @@ requirements:
     - glib
     - cairo
     - pango
-    - jpeg
+    - libjpeg-turbo
   run:
     - python
     - code-server >=3.9.2
