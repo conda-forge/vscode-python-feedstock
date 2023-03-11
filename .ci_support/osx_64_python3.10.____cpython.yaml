@@ -18,10 +18,8 @@ giflib:
 - '5.2'
 glib:
 - '2'
-jpeg:
-- '9'
 libjpeg_turbo:
-- '2'
+- 2.1.5
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pango:
