@@ -1,5 +1,5 @@
 {% set name = "vscode-python" %}
-{% set version = "2022.16.1" %}
+{% set version = "2022.20.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 10368d0175e34583a84935e691dba122d4ece2e23305700f226b6807508a30b1
+  sha256: bddd5eb77a03768d4e836c965e2739eef82818111a43d42f4b3188a8ab4d240a
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   skip_compile_pyc:
     - '*/python/debugpy/_vendored/*'
